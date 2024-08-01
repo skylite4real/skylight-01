@@ -1,0 +1,410 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Enable momentum scrolling */
+}
+
+/* Short Section Styles */
+.short-section {
+    display: none;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1002;
+    box-sizing: border-box;
+    padding-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.short-section.fullscreen {
+    display: block;
+}
+
+.close-short-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+    z-index: 1003;
+    transition: color 0.3s ease, transform 0.3s ease;
+    will-change: color, transform;
+}
+
+.short-thin-line {
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc;
+    margin: 10px 0;
+}
+
+.short-form-header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #6a1b9a, #1976d2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shortGradientAnimation 3s ease infinite;
+    will-change: background-position;
+}
+
+@keyframes shortGradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.short-form-content {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    padding-bottom: 150px;
+    will-change: transform, box-shadow;
+}
+
+/* Form Group Styles */
+.short-form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.short-filter-button,
+.short-preview-button,
+#closeShortPreviewButton,
+#uploadShortButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: background-color, transform, box-shadow;
+}
+
+.short-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: background-color, box-shadow;
+}
+
+.short-form-control:focus, 
+.short-category-form-control:focus, 
+.short-privacy-form-control:focus, 
+.short-comment-form-control:focus, 
+.short-paid-form-control:focus, 
+.short-ads-form-control:focus {
+    outline: none;
+    border: none;
+}
+
+.short-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.short-awesome-line {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #6200ea;
+    transition: width 0.3s ease;
+}
+
+.short-form-group:focus-within .short-awesome-line {
+    width: 100%;
+}
+
+/* Enhancements for short video and thumbnail display sections */
+#shortDisplaySection {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#uploadedShort {
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+/* Styles for short button container, close preview, and upload buttons */
+#shortButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+#closeShortPreviewButton,
+#uploadShortButton {
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: background-color, transform, box-shadow;
+}
+
+/* Styles for Select Category Dropdown */
+.short-category-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+.short-category-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for Choose Privacy Dropdown */
+.short-privacy-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+.short-privacy-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensuring options do not affect other styles */
+.short-category-form-control option,
+.short-privacy-form-control option,
+.short-comment-form-control option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/* Styles for Video Comments Dropdown */
+.short-comment-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+.short-comment-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for Get Paid Dropdown */
+.short-paid-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+.short-paid-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for Choose Ads Dropdown */
+.short-ads-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+.short-ads-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensuring options do not affect other styles */
+.short-paid-form-control option,
+.short-ads-form-control option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .short-form-content {
+        padding: 20px;
+        padding-bottom: 130px;
+    }
+
+    .short-form-header {
+        font-size: 28px;
+    }
+
+    .short-form-control,
+    .short-category-form-control,
+    .short-privacy-form-control,
+    .short-comment-form-control,
+    .short-paid-form-control,
+    .short-ads-form-control {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .short-filter-button,
+    .short-preview-button,
+    #closeShortPreviewButton,
+    #uploadShortButton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .short-section {
+        padding-top: 40px;
+    }
+
+    #shortButtonContainer {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .short-form-content {
+        padding: 25px;
+        padding-bottom: 140px;
+    }
+
+    .short-form-header {
+        font-size: 30px;
+    }
+
+    .short-form-control,
+    .short-category-form-control,
+    .short-privacy-form-control,
+    .short-comment-form-control,
+    .short-paid-form-control,
+    .short-ads-form-control {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .short-filter-button,
+    .short-preview-button,
+    #closeShortPreviewButton,
+    #uploadShortButton {
+        padding: 7px 14px;
+        font-size: 13px;
+    }
+
+    .short-section {
+        padding-top: 45px;
+    }
+
+    #shortButtonContainer {
+        padding: 18px;
+    }
+}

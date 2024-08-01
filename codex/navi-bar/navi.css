@@ -1,0 +1,124 @@
+/* General styling */
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    border-bottom: 1px solid white;
+    background-color: white !important; /* Ensure background color is applied */
+    padding: 0;
+}
+
+.logo {
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 50%; /* Make it circular */
+    margin-left: 10px; /* Adjust margin for spacing */
+}
+
+#menuButton {
+    color: #000000; /* Changed to black */
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-left: 20px; /* Add more space between sidebar menu and left corner */
+}
+
+#menuButton i {
+    font-size: 24px;
+    margin-top: 2px; /* Adjusted margin to move it slightly down */
+    color: #000000; /* Changed to black */
+}
+
+#menuButton:focus {
+    outline: 2px solid #000000; /* Add a black outline */
+    outline-offset: -2px; /* Adjust the offset to control the outline's position */
+}
+
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-left: 10px; /* Adjust margin for spacing */
+    margin-right: 20px; /* Add more space between profile picture and right corner */
+}
+
+.search-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; /* Adjust margin for spacing */
+}
+
+.search-icon-container .fa-magnifying-glass {
+    font-size: 20px; /* Adjust the size as needed */
+    color: #000000;
+}
+
+/* Remove padding */
+.container-fluid {
+    padding: 0;
+}
+
+.d-flex {
+    flex-wrap: nowrap; /* Ensure elements do not wrap */
+}
+
+.logo-name-container {
+    margin-right: auto;
+    margin-left: 0; /* Ensure margin-left is reset for logo container */
+    margin-top: 10px; /* Add space above */
+}
+
+.mt-2 {
+    margin-top: 10px; /* Add space above elements */
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+/* Responsive styling */
+@media (max-width: 1199.98px) {
+    .navbar {
+        padding: 0 15px; /* Add padding for larger screens */
+    }
+    .logo-name-container {
+        margin-left: 5px; /* Adjust margin for medium screens */
+    }
+    .mr-2 {
+        margin-right: 5px; /* Adjust margin for medium screens */
+    }
+    #menuButton:focus {
+        outline: 2px solid #000000; /* Ensure the outline appears correctly on medium screens */
+        outline-offset: -2px; /* Adjust the offset for medium screens */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar {
+        padding: 0 10px; /* Add padding for smaller screens */
+    }
+    .logo-name-container {
+        margin-left: 2px; /* Adjust margin for small screens */
+    }
+    .mr-2 {
+        margin-right: 2px; /* Adjust margin for small screens */
+    }
+    .form-control {
+        width: 100%;
+    }
+    #menuButton {
+        padding-right: 10px;
+    }
+    #menuButton:focus {
+        outline: 2px solid #000000; /* Ensure the outline appears correctly on small screens */
+        outline-offset: -2px; /* Adjust the offset for small screens */
+    }
+}

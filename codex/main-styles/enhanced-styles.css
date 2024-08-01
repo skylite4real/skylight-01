@@ -1,0 +1,67 @@
+/* Variables */
+:root {
+    --primary-color: silver; /* Black */
+    --blue-color: black; /* Blue */
+}
+
+/* General styles */
+html, body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    border-bottom: none; /* Remove default border */
+}
+
+.nav-tabs .nav-item {
+    padding: 0 5px; /* Adjusted padding to reduce distance between items */
+}
+
+.nav-tabs .nav-link {
+    padding: 10px 15px;
+    font-size: 16px; /* Adjusted size */
+    color: var(--primary-color); /* Black color for tab links */
+    border: none; /* Remove default border */
+    border-radius: 0; /* Remove default border-radius */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+    outline: none; /* Remove the outline */
+    box-shadow: none; /* Remove box shadow */
+    margin-right: 0; /* Removed margin to reduce distance between nav links */
+}
+
+.nav-tabs .nav-link:focus {
+    outline: none; /* Remove outline when focused */
+    box-shadow: none; /* Remove box shadow when focused */
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--blue-color); /* Blue color for active tab link */
+    background-color: transparent; /* Transparent background */
+    border-bottom: none; /* Remove the bottom border */
+}
+
+.nav-tabs .nav-link i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+    position: relative; /* Ensure relative positioning */
+    top: 5px; /* Adjust vertical alignment */
+    color: var(--primary-color); /* Initially black icons */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.nav-tabs .nav-link.active i {
+    color: var(--blue-color); /* Blue color for active icon */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767.98px) {
+    .nav-item {
+        flex: 1;
+    }
+}

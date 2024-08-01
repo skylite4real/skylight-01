@@ -1,0 +1,202 @@
+/* video-upload.css */
+
+.video-upload-form {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.video-upload-form .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0;
+}
+
+.video-upload-form .filter-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.video-upload-form .filter-button:hover {
+    background-color: #e0e0e0;
+}
+
+.video-upload-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.video-upload-form .form-control.description {
+    resize: none;
+    overflow-y: hidden;
+    min-height: 100px;
+    max-height: 300px; /* Limit to which the textarea can grow */
+}
+
+.video-upload-form .preview-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.video-upload-form .preview-button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for chosen video and thumbnail */
+#videoDisplaySection, #thumbnailDisplaySection {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    text-align: center; /* Center align content */
+}
+
+#videoDisplaySection {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    position: relative;
+}
+
+#uploadedVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover; /* Ensure the video fills the container without black bars */
+}
+
+#uploadedVideo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#thumbnailDisplaySection {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+}
+
+#chosenThumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2196F3;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover; /* Ensure the thumbnail fills the container without black bars */
+}
+
+#chosenThumbnail:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    #uploadedVideo, #chosenThumbnail {
+        max-height: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #uploadedVideo, #chosenThumbnail {
+        max-height: none;
+    }
+}
+
+/* Ensure the video scales properly and fills the container */
+.video-section video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80vh; /* Ensure it doesn't grow too large on larger screens */
+    object-fit: cover; /* Ensure the video maintains aspect ratio and fills the container */
+}
+/* Preview Section Styles */
+
+#videoPreviewSection {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: block;
+}
+
+#videoPreviewSection video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Ensure the video fills the container without black bars */
+}
+
+#videoPreviewSection .filter-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#videoPreviewSection .upload-button {
+    bottom: 10px;
+    left: 10px;
+}
+
+#videoPreviewSection .close-button {
+    top: 10px;
+    right: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    #videoPreviewSection video {
+        max-height: none;
+    }
+
+    #videoPreviewSection .filter-button {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #videoPreviewSection video {
+        max-height: none;
+    }
+
+    #videoPreviewSection .filter-button {
+        padding: 6px 12px;
+    }
+}

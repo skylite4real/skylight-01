@@ -1,0 +1,68 @@
+/* General styling */
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    background-color: #f8f9fa; /* Light grey background for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 10px 0; /* Add some padding */
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 0 5px; /* Adjusted padding to reduce distance between items */
+}
+
+.nav-link {
+    color: #e5e4e2; /* Platinum color for initial state */
+    border: none; /* Remove border */
+    padding: 10px 0;
+    font-size: 16px;
+    position: relative; /* Ensure relative positioning */
+    text-decoration: none; /* Remove underline */
+    background: none; /* Remove background */
+    margin-right: 0; /* Removed margin to reduce distance between nav links */
+    outline: none; /* Remove the outline */
+    box-shadow: none; /* Remove box shadow */
+    -webkit-box-shadow: none; /* Remove box shadow in webkit browsers */
+    -moz-box-shadow: none; /* Remove box shadow in Firefox */
+    -moz-focus-inner {
+        border: 0; /* Remove inner focus border in Firefox */
+    }
+}
+
+.nav-link:focus {
+    outline: none; /* Remove outline when focused */
+    box-shadow: none; /* Remove box shadow when focused */
+    -webkit-box-shadow: none; /* Remove box shadow when focused in webkit browsers */
+    -moz-box-shadow: none; /* Remove box shadow when focused in Firefox */
+}
+
+.nav-link.active {
+    color: #000000; /* Black color for active tab */
+    background-color: transparent; /* Transparent background to remove box */
+    border-bottom: none; /* Remove the bottom border */
+}
+
+.nav-link i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 5px;
+    position: relative; /* Ensure relative positioning */
+    top: 5px; /* Adjusted vertical alignment */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767.98px) {
+    .nav-item {
+        flex: 1;
+    }
+}

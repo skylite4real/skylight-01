@@ -1,0 +1,242 @@
+/* Profile Section */
+.profile-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: none;
+    overflow-y: auto;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+
+}
+
+.close-profile-icon,
+.gear-icon,
+.options-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #333;
+}
+
+.add-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #000 !important; /* Ensures the icon is always black */
+}
+
+.options-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown Menus */
+.add-dropdown,
+.options-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    width: 200px;
+}
+
+.add-dropdown a,
+.options-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.add-dropdown a:last-child,
+.options-dropdown a:last-child {
+    border-bottom: none;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.username {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.followers {
+    font-size: 16px;
+    color: #777;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.edit-profile-btn {
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.update-profile-btn {
+    background-color: #ffc107;
+}
+
+.thin-line {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.additional-info p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.additional-info span {
+    font-weight: bold;
+}
+
+.additional-info .edit-input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background-color: #fff;
+    outline: none;
+    display: inline-block;
+}
+
+.additional-info .edit-input:focus {
+    border-bottom-color: #000;
+    outline: none;
+}
+
+.profile-tabs {
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    scroll-snap-align: center;
+    transition: border-bottom 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tab.active {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.video-item,
+.short-item,
+.post-item,
+.like-item,
+.save-item,
+.comment-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tabs.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* Positioning the add-icon, gear-icon, and options-icon */
+.options-container .add-icon {
+    order: 1;
+}
+
+.options-container .gear-icon {
+    order: 2;
+}
+
+.options-container .options-icon {
+    order: 3;
+    margin-right: 0;
+}

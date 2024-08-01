@@ -1,0 +1,134 @@
+/* Settings Section */
+.settings-section {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* Pure white background */
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth opening transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.settings-section.show {
+    display: block;
+    opacity: 1;
+}
+
+.settings-section .close-settings-icon {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #000; /* Set color to black */
+    transition: color 0.2s ease-in-out;
+}
+
+.settings-section .close-settings-icon:hover,
+.settings-section .close-settings-icon:active {
+    color: #555; /* Slightly lighter black for hover and active states */
+}
+
+.settings-title {
+    display: block;
+    font-size: 1.8em;
+    color: #000;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.settings-divider {
+    border: none;
+    border-top: 1px solid #ccc; /* Light grey color for the lines */
+    margin: 15px 0;
+}
+
+.settings-option {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 4px; /* Slightly rounded corners for options */
+    margin-bottom: 10px; /* Added spacing between options */
+    background: linear-gradient(to right, #f9f9f9, #ffffff); /* Subtle gradient background */
+}
+
+.settings-option:hover {
+    background: linear-gradient(to right, #f0f0f0, #ffffff); /* Light grey background on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow on hover for depth */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.settings-option span {
+    margin-left: 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.settings-option .toggle-icon {
+    margin-left: auto;
+    font-size: 1.2em;
+}
+
+/* Sub-Option Styling */
+.sub-option {
+    display: none;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9f9f9; /* Light background for sub-options */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for sub-options */
+    border-radius: 4px; /* Rounded corners for sub-options */
+    animation: fadeIn 0.3s ease-in-out; /* Fade-in animation for sub-options */
+}
+
+.sub-option label {
+    margin: 5px 0;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* Checkbox Customization */
+.sub-option input[type="checkbox"] {
+    accent-color: black; /* Change checkbox color when checked */
+}
+
+/* Icon Colors */
+.settings-option i.fa-moon { color: #FFA500; } /* Orange for Dark Mode */
+.settings-option i.fa-bell { color: #1E90FF; } /* Dodger Blue for Notifications */
+.settings-option i.fa-language { color: #32CD32; } /* Lime Green for Languages */
+.settings-option i.fa-video { color: #FF6347; } /* Tomato for Media Control */
+.settings-option i.fa-exclamation-triangle { color: #FFD700; } /* Gold for Sensitive Content */
+.settings-option i.fa-user { color: #8A2BE2; } /* Blue Violet for Profile Visibility */
+.settings-option i.fa-play { color: #FF4500; } /* Orange Red for Play Your Ads */
+.settings-option i.fa-clock { color: #4682B4; } /* Steel Blue for Time on Skylite */
+.settings-option i.fa-database { color: #4B0082; } /* Indigo for Your data on Skylite */
+.settings-option i.fa-file-contract { color: #B22222; } /* Firebrick for Terms of Service */
+.settings-option i.fa-shield-alt { color: #2E8B57; } /* Sea Green for Privacy Policy */
+.settings-option i.fa-exclamation-circle { color: #DC143C; } /* Crimson for Report a Problem */
+.settings-option i.fa-comment-dots { color: #FF69B4; } /* Hot Pink for Feedback */
+.settings-option i.fa-book { color: #8B4513; } /* Saddle Brown for User Guide */
+.settings-option i.fa-info-circle { color: #00CED1; } /* Dark Turquoise for About */
+
+/* Fade-in animation for sub-options */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Center the settings content on large screens */
+@media (min-width: 1200px) {
+    .settings-content {
+        width: 50%;
+        margin: 0 auto;
+    }
+}

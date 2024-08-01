@@ -1,0 +1,45 @@
+/* Styles specific to the chosen video */
+#videoDisplaySection {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#uploadedVideo {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    #uploadedVideo {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #uploadedVideo {
+        max-width: 60%;
+    }
+}
+
+/* thumbnail styles */
+#thumbnailDisplaySection {
+    display: none;
+    text-align: center;
+    margin-top: 10px; /* Ensure it appears below the button */
+}
+
+#thumbnailDisplaySection img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

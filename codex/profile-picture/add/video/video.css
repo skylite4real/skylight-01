@@ -1,0 +1,319 @@
+/* Video Upload Form Styles */
+.video-upload-form {
+    display: none;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1002;
+    box-sizing: border-box;
+    padding-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scroll-behavior: smooth; /* Smooth scrolling on all devices */
+    will-change: transform; /* Enable GPU acceleration */
+}
+
+.video-upload-form .thin-line {
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc;
+    margin: 10px 0;
+}
+
+.video-upload-form .form-header {
+    text-align: center;
+    font-size: 32px; /* Increased font size */
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #6a1b9a, #1976d2); /* Gradient background for header */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 3s ease infinite;
+    will-change: background-position;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.video-upload-form .form-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 30px; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Darker shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Ensure it positions the buttons at the bottom */
+    padding-bottom: 150px; /* Adjusted padding to bottom for buttons */
+    will-change: transform, box-shadow;
+}
+
+.video-upload-form .form-group {
+    margin-bottom: 25px; /* Increased margin */
+    position: relative;
+}
+
+.video-upload-form .filter-button,
+.video-upload-form .preview-button,
+#closePreviewButton,
+#uploadButton {
+    display: inline-block;
+    padding: 8px 16px; /* Reduced padding */
+    background: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    border-radius: 25px; /* Circular left and right sides */
+    border: none; /* Remove border */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px; /* Adjusted font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+.video-upload-form .form-control {
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    border: none;
+    border-radius: 6px; /* More rounded corners */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Larger font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: background-color, box-shadow;
+}
+
+.video-upload-form .form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.awesome-line {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px; /* Increased height */
+    background-color: #6200ea;
+    transition: width 0.3s ease;
+    will-change: width;
+}
+
+.form-group:focus-within .awesome-line {
+    width: 100%;
+}
+
+#closeVideoUploadForm {
+    color: #000000;
+    font-size: 2em; /* Increased font size */
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1003;
+    transition: color 0.3s ease, transform 0.3s ease;
+    will-change: transform;
+}
+
+#videoDisplaySection,
+#thumbnailDisplaySection {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#uploadedVideo,
+#chosenThumbnail {
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10px; /* Positioned further at the bottom */
+    left: 0;
+    width: 100%;
+    padding: 20px; /* Increased padding for better spacing */
+    will-change: transform;
+}
+
+#closePreviewButton,
+#uploadButton {
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 25px; /* Circular left and right sides */
+    border: none; /* Remove border */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+#videoCategory {
+    width: 100%;
+    padding: 15px; /* Consistent padding with form control */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Consistent font size with form control */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+#videoCategory:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#videoPrivacy {
+    width: 100%;
+    padding: 15px; /* Consistent padding with form control */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Consistent font size with form control */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+#videoPrivacy:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#videoCategory option,
+#videoPrivacy option,
+#videoComments option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Consistent font size */
+}
+
+#videoComments {
+    width: 100%;
+    padding: 15px; /* Consistent padding with form control */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Consistent font size with form control */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+#videoComments:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#videoPaid {
+    width: 100%;
+    padding: 15px; /* Consistent padding with form control */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Consistent font size with form control */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+#videoPaid:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#videoAds {
+    width: 100%;
+    padding: 15px; /* Consistent padding with form control */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Consistent font size with form control */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    will-change: background-color, box-shadow;
+}
+
+#videoAds:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#videoPaid option,
+#videoAds option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Consistent font size */
+}
+
+#videoCategory,
+#videoPrivacy,
+#videoComments,
+#videoPaid,
+#videoAds {
+    outline: none;
+}
+
+#uploadedVideo, #previewVideo, #chosenThumbnail, #previewThumbnail {
+    user-select: none;
+}

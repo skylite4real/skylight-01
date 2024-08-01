@@ -1,0 +1,522 @@
+/* Full-screen modal styles */
+.full-screen-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* Post section styles */
+.post-section {
+    display: none;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1002;
+    box-sizing: border-box;
+    padding-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.post-thin-line {
+    width: 100%;
+    height: 1px;
+    background-color: #cccccc;
+    margin: 10px 0;
+}
+
+.post-form-header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #6a1b9a, #1976d2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: postGradientAnimation 3s ease infinite;
+}
+
+@keyframes postGradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.post-form-content {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.post-form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.post-filter-button,
+.post-preview-button,
+#closePostPreviewButton,
+#uploadPostButton {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-form-control:focus,
+.post-category-form-control:focus,
+.post-privacy-form-control:focus,
+.post-comment-form-control:focus {
+    outline: none;
+    border: none;
+}
+
+.post-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-awesome-line {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #6200ea;
+    transition: width 0.3s ease;
+}
+
+.post-form-group:focus-within .post-awesome-line {
+    width: 100%;
+}
+
+.close-post-icon {
+    color: #000000;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1003;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#postDisplaySection {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#uploadedPostImage,
+#uploadedPostVideo {
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#postButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+#closePostPreviewButton,
+#uploadPostButton {
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-category-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+.post-category-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-privacy-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+.post-privacy-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-category-form-control option,
+.post-privacy-form-control option,
+.post-comment-form-control option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.post-comment-form-control {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+.post-comment-form-control:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fix for music player touching the choose music button */
+#postMusicDisplaySection {
+    margin-top: 20px; /* Added margin to create space between the button and the music player */
+}
+
+#uploadedPostMusic {
+    max-width: 100%;
+    display: block; /* Ensure it displays as a block element */
+}
+
+/* Swiper styles */
+.swiper-container {
+    width: 100%;
+    height: 50vh; /* Fixed height for the swiper container */
+    margin-top: 10px;
+    overflow: hidden; /* Prevent other elements from moving */
+    display: none; /* Initially hidden */
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img,
+.swiper-slide video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Base styles for Swiper pagination dots */
+.swiper-pagination-bullet {
+    background: linear-gradient(135deg, #ff5f6d, #ffc371) !important;
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    border-radius: 50%; /* Ensure the dots are perfectly circular */
+}
+
+.swiper-pagination-bullet-active {
+    background: linear-gradient(135deg, #42e695, #3bb2b8) !important;
+    opacity: 1;
+    transform: scale(1.5); /* Slightly enlarge the active dot */
+    box-shadow: 0 0 15px rgba(66, 230, 149, 0.8); /* Add a glowing effect */
+}
+
+/* Hover effect to make the dots interactive */
+.swiper-pagination-bullet:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    background: linear-gradient(135deg, #fdc830, #f37335) !important;
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 768px) {
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+    }
+
+    .swiper-pagination-bullet-active {
+        transform: scale(1.6);
+    }
+
+    .swiper-pagination-bullet:hover {
+        transform: scale(1.3);
+    }
+}
+
+/* Additional styles for extra-large screens */
+@media (min-width: 1200px) {
+    .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+    }
+
+    .swiper-pagination-bullet-active {
+        transform: scale(1.7);
+    }
+
+    .swiper-pagination-bullet:hover {
+        transform: scale(1.4);
+    }
+}
+
+
+/* Ensure video controls do not have download option */
+.swiper-container video::-internal-media-controls-download-button {
+    display: none;
+}
+
+.swiper-container video::-webkit-media-controls-enclosure {
+    overflow: hidden;
+}
+
+.swiper-container video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust width to hide download button */
+}
+
+/* Prevent right-click on media elements to disable context menu */
+.swiper-container img,
+.swiper-container video,
+#uploadedPostMusic {
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+.swiper-container img,
+.swiper-container video,
+#uploadedPostMusic {
+    pointer-events: auto; /* Ensure media elements are still interactive */
+}
+
+.swiper-container img,
+.swiper-container video,
+#uploadedPostMusic {
+    -webkit-touch-callout: none; /* Disable callout on iOS devices */
+    -webkit-user-select: none; /* Disable text selection on Chrome, Safari, and Opera */
+    -moz-user-select: none; /* Disable text selection on Firefox */
+    -ms-user-select: none; /* Disable text selection on Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Firefox */
+}
+
+
+.preview-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.media-container {
+    margin: 10px;
+    position: relative;
+}
+
+.media-container img, .media-container video {
+    max-width: 100%;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-container audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* Add this at the end of your post.css */
+
+/* Preview section styles */
+.preview-section {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.preview-section .swiper-wrapper {
+    display: flex;
+}
+
+.preview-section .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: auto; /* Adjust to auto for responsive height */
+}
+
+.preview-section .swiper-slide img,
+.preview-section .swiper-slide video {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-section .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.preview-section .swiper-pagination-bullet {
+    background: linear-gradient(135deg, #ff5f6d, #ffc371) !important;
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    border-radius: 50%; /* Ensure the dots are perfectly circular */
+}
+
+.preview-section .swiper-pagination-bullet-active {
+    background: linear-gradient(135deg, #42e695, #3bb2b8) !important;
+    opacity: 1;
+    transform: scale(1.5); /* Slightly enlarge the active dot */
+    box-shadow: 0 0 15px rgba(66, 230, 149, 0.8); /* Add a glowing effect */
+}
+
+/* Hover effect to make the dots interactive */
+.preview-section .swiper-pagination-bullet:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    background: linear-gradient(135deg, #fdc830, #f37335) !important;
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 768px) {
+    .preview-section .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+    }
+
+    .preview-section .swiper-pagination-bullet-active {
+        transform: scale(1.6);
+    }
+
+    .preview-section .swiper-pagination-bullet:hover {
+        transform: scale(1.3);
+    }
+}
+
+/* Additional styles for extra-large screens */
+@media (min-width: 1200px) {
+    .preview-section .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+    }
+
+    .preview-section .swiper-pagination-bullet-active {
+        transform: scale(1.7);
+    }
+
+    .preview-section .swiper-pagination-bullet:hover {
+        transform: scale(1.4);
+    }
+}

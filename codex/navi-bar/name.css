@@ -1,0 +1,44 @@
+.star-turn {
+    letter-spacing: -4px;
+    font-weight: solid;
+    font-size: 22px;
+    line-height: 2.0;
+    margin-left: 0; /* Adjust the margin value to decrease the gap */
+}
+
+.letter-s {
+    color: red;
+}
+
+.letter-t {
+    color: orange;
+}
+
+.letter-a {
+    color: rgb(16, 239, 16);
+}
+
+.letter-r {
+    color: rgb(0, 255, 0);
+}
+
+.letter-T {
+    color: rgb(0, 184, 246);
+}
+
+.letter-u {
+    color: blue;
+}
+
+.letter-r2 {
+    color: darkblue;
+}
+
+.letter-n {
+    color: purple;
+}
+
+/* Adjust the gap between the logo and the name */
+.logo-name-container .logo {
+    margin-right: -14px; /* Use a negative margin to pull the elements closer together */
+}

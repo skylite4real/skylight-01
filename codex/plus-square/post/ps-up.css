@@ -1,0 +1,87 @@
+.post-upload-form {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Limit the maximum height to 80% of the viewport */
+}
+
+.post-upload-form .form-group {
+    margin-bottom: 15px;
+}
+
+.post-upload-form .custom-file-input {
+    cursor: pointer;
+}
+
+.post-upload-form .filter-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-upload-form .filter-button:hover {
+    background-color: #e0e0e0;
+}
+
+.post-upload-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.post-upload-form .preview-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.post-upload-form .preview-button:hover {
+    background-color: #0056b3;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 50vh; /* Fixed height for the swiper container */
+    margin-top: 10px;
+    overflow: hidden; /* Prevent other elements from moving */
+    display: none; /* Initially hidden */
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Ensure swiper pagination is at the bottom of the image container */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}

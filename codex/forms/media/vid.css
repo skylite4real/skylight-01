@@ -1,0 +1,816 @@
+/* General Video Upload Section */
+.video-upload-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    display: none;
+    overflow-y: auto;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    flex-direction: column;
+    align-items: left;
+}
+
+/* Close Icon */
+.close-video-upload {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Header */
+.video-section-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Circle Container */
+.circle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Circle Style */
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin: 0 15px; /* Adjust margin to space circles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Responsive Circle Styles */
+@media (max-width: 1200px) {
+    .circle {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 992px) {
+    .circle {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .circle {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    .circle {
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+    }
+}
+
+/*////////////////////*/
+/*////////////////////*/
+.step-1 {
+    text-align: left;
+    max-width: 400px;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    width: fit-content;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 8px 12px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Added property to increase text thickness */
+
+}
+
+.step-2 {
+    text-align: left;
+    max-width: 600px;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    width: fit-content;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 8px 12px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Added property to increase text thickness */
+
+}
+
+/*section-names*/
+.section-names {
+    text-align: center;
+    color: #333;
+    font-size: larger;
+    font-family: 'Arial', sans-serif;
+}
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Video Upload Wrapper */
+.video-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+/* Video Upload Item */
+.video-upload-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 20px;
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Display Box */
+.display-box {
+    position: relative;
+    width: 100%;
+    max-width: 335px; /* Reduced max-width to adjust box size */
+    height: 190px; /* Fixed height */
+    border: 2px solid #ccc; /* Solid border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    overflow: hidden;
+}
+
+/* Close Icon for Boxes */
+.close-icon {
+    position: absolute;
+    color: white;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.close-icon:hover {
+    color: #4f5154;
+}
+
+/* Choose Video/Thumbnail Button */
+.choose-video-button,
+.choose-thumbnail-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #1E90FF;
+}
+
+.choose-video-button i,
+.choose-thumbnail-button i {
+    font-size: 24px;
+}
+
+.choose-video-button:hover,
+.choose-thumbnail-button:hover {
+    color: #104E8B;
+}
+
+/* Description */
+.description {
+    display: none;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Video and Thumbnail Styles */
+video,
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the entire video/image fits within the box without being cropped */
+    border-radius: 5px;
+    background-color: #000; /* Add a background color to fill any gaps */
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Blue Text */
+.blue-text {
+    color: #1E90FF;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.blue-text:hover {
+    color: #104E8B;
+}
+/* Info Icon */
+.fa-circle-info {
+    font-size: 18px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #1E90FF;
+}
+.fa-circle-info:hover {
+    color: #104E8B;
+}
+
+/* Info Box */
+.info-box {
+    padding: 10px;
+    background-color: white;
+    overflow-y: hidden;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-height: 200px;
+    font-size: 14px; /* Reduced font size */
+    line-height: 1.4; /* Reduced line height for smaller gaps between lines */
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Video Upload Terms and Privacy Styles */
+#termsSummary {
+    max-width: 400px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+#termsDetails {
+    max-width: 400px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Hide scrollbar for terms details */
+#termsDetails::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+#termsDetails {
+    scrollbar-width: none; /* Firefox */
+}
+
+#termsDetails h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#termsDetails p, #termsDetails ul {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#termsDetails ul {
+    list-style-type: disc;
+}
+
+#termsDetails li {
+    margin-bottom: 5px;
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Video Upload Box */
+.video-upload-box {
+    width: 400px;
+    margin-left: 0px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Left Box */
+.video-upload-box.left {
+    position: absolute;
+    left: 0;
+}
+
+/* Middle Box */
+.video-upload-box.middle {
+    position: absolute;
+    left: 450px; /* Increase margin-left from the left box */
+    margin-top: 110px; /* Margin-top */
+    right: 600px; /* Add spacing between the right box */
+    width: calc(100% - 900px); /* Adjust width based on the new right value */
+}
+
+/* Right Box */
+.video-upload-box.right {
+    position: absolute;
+    right: 20px; /* Add gap between right box and right corner of the page */
+    margin-top: 110px;
+}
+
+/* Right Box Video Display */
+.display-box-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Scrollable Content */
+.scrollable-content {
+    max-height: 200px; /* Fixed height for scrollable content */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Hide scrollbar for scrollable content */
+.scrollable-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scrollable-content {
+    scrollbar-width: none; /* Firefox */
+}
+
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Styles for frames container */
+#framesContainer {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#framesContainer::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+#framesContainer {
+    scrollbar-width: none; /* Firefox */
+}
+
+.frame-container {
+    position: relative;
+}
+
+.frame {
+    width: 100px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+.ellipsis-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.thumbnail-options {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.thumbnail-option {
+    padding: 8px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.thumbnail-option:hover {
+    background-color: #f0f0f0;
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Video Preview Button */
+.video-preview-button {
+    margin-top: 10px; /* Space between thumbnail box and button */
+    padding: 5px 10px;
+    margin-left: 250px;
+    background-color: #1E90FF;
+    color: white;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.video-preview-button:hover {
+    background-color: #104E8B;
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Video Resolution Display */
+#videoResolution {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    width: fit-content;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 8px 12px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Close Preview Button */
+.close-preview-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: white; /* Different color to differentiate */
+    color: #FF6347;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    width: fit-content; /* Adjust button width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.close-preview-button {
+    position: relative;
+    margin-top: 10px; /* Spacing between video preview and button */
+    align-self: flex-start; /* Align button to the start of the container */
+}
+
+.close-preview-button:hover {
+    background-color: rgb(240, 234, 234);
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/* Next Button */
+.next-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #1E90FF;
+    color: white;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    margin-left: 325px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.next-button:hover {
+    background-color: #104E8B;
+}
+
+
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/*/////////////////////////////*/
+/*/////////////////////////////*
+/* circle-2 content */
+/* Container for input and info */
+.input-container {
+    position: relative;
+    margin-bottom: 10px; /* Reduced gap between each container */
+}
+
+/* Info Icon */
+.fa-circle-info-video-details {
+    font-size: 14px;
+    cursor: pointer;
+    color: #1E90FF;
+    margin-right: 5px; /* Reduced margin */
+}
+
+.fa-circle-info-video-details:hover {
+    color: #104E8B;
+}
+
+/* Info Box */
+.info-box-video-details {
+    padding: 8px; /* Reduced padding */
+    background-color: white;
+    overflow-y: hidden;
+    border: none !important;
+    outline: none !important;
+
+    margin-bottom: 5px; /* Reduced margin */
+    max-height: 200px;
+    display: none;
+    font-size: 14px; /* Reduced font size */
+    line-height: 1; /* Reduced line height for smaller gaps between lines */
+}
+
+
+/* Title Input */
+.video-upload-box.middle input#videoTitle {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.video-upload-box.middle input#videoTitle:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+    outline: none;
+}
+
+/* Description Textarea */
+.video-upload-box.middle textarea#videoDescriptionInput {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    resize: vertical;
+}
+
+.video-upload-box.middle textarea#videoDescriptionInput:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+    outline: none;
+}
+
+/* Location Input */
+.video-upload-box.middle input#videoLocation {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.video-upload-box.middle input#videoLocation:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+    outline: none;
+}
+
+/* Tags Input */
+.video-upload-box.middle input#videoTags {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.video-upload-box.middle input#videoTags:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+    outline: none;
+}
+
+/* Category Select */
+.video-upload-box.middle select#videoCategory {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.video-upload-box.middle select#videoCategory:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+    outline: none;
+}
+
+/* Middle Box */
+.video-upload-box.middle {
+    position: absolute;
+    left: 450px; /* Increase margin-left from the left box */
+    margin-top: 110px; /* Margin-top */
+    right: 600px; /* Add spacing between the right box */
+    width: calc(100% - 900px); /* Adjust width based on the new right value */
+}
+
+
+/*circle-2*/
+/* Go Back Button */
+.go-back-button-circle-2 {
+    margin-top: 15px;
+    padding: 5px 10px;
+    margin-left: 515px;
+    background-color: white !important;
+    color: #FF6347 !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1 ) !important;
+}
+
+.go-back-button-circle-2:hover {
+    background-color: rgb(240, 234, 234) !important;
+}
+
+/*circle-2*/
+/* Middle Box Next Button */
+.middle-box-next-button {
+    margin-top: 15px;
+    padding: 5px 10px;
+    margin-bottom: 20px !important;
+    margin-left: 544px;
+    background-color: #1E90FF;
+    color: white;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.middle-box-next-button:hover {
+    background-color: #104E8B;
+}
+
+/*///////////////////////////////*/
+/*///////////////////////////////*/
+/* Circle-3 Box Styles */
+#circle3Box {
+    position: absolute;
+    left: 450px; /* Matches the middle box */
+    margin-top: 110px; /* Matches the margin-top of middle box */
+    right: 600px; /* Same spacing as middle box */
+    width: calc(100% - 900px); /* Adjust width based on right value */
+    display: none; /* Initially hidden */
+}
+
+/* Go Back Button */
+.go-back-button-circle-3 {
+    margin-top: 10px !important;
+    padding: 5px 10px;
+    margin-left: 514px;
+    background-color: white !important;
+    color: #FF6347 !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.go-back-button-circle-3:hover {
+    background-color: rgb(240, 234, 234) !important;
+}
+
+/* next Button */
+.submit-button {
+    margin-top: 10px !important;
+    margin-left: 544px;
+    padding: 5px 10px;
+    background-color: #1E90FF;
+    color: white;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #104E8B;
+}
+
+
+/*//////////////////////////////*/
+/*/////////////////////////////*/
+/* Circle-4 Box Styles */
+#circle4Box {
+    position: absolute;
+    left: 450px; /* Matches the middle box and circle-3 box */
+    margin-top: 110px; /* Matches the margin-top of middle box */
+    right: 600px; /* Same spacing as middle box */
+    width: calc(100% - 900px); /* Adjust width based on right value */
+    display: none; /* Initially hidden */
+}
+
+/* Go Back Button */
+.go-back-button-circle-4 {
+    margin-top: 10px !important;
+    padding: 5px 10px;
+    margin-left: 514px;
+    background-color: white !important;
+    color: #FF6347 !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.go-back-button-circle-4:hover {
+    background-color: rgb(240, 234, 234) !important;
+}
+
+
+/* next Button */
+.upload-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    margin-left: 525px;
+    background-color: #1E90FF;
+    color: white;
+    border: none !important;
+    outline: none !important;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upload-button:hover {
+    background-color: #104E8B;
+}
